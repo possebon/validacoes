@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AX_Migracao_Staging" Class="AX_Migracao_StagingDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=TM-DBAXDIVERSOS;Initial Catalog=AX_Migracao_Staging;Integrated Security=True" SettingsObjectName="ValidadorDados.Properties.Settings" SettingsPropertyName="AX_Migracao_StagingConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.stg_Clientes" Member="stg_Clientes">
+    <Type Name="stg_Cliente">
+      <Column Name="RegistroIDMig" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AccountNum" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="OldAccountNum" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CustGroup" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="LanguageId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Currency" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CustClassificationId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PartyType" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MiddleName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NameAlias" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="LocationRole" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ZipCode" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Street" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="StreetNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="BuildingCompliment" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PostBox" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DistrictName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CountryRegionId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TaxGroup" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CNPJCPFNum_BR" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IENum_BR" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="StatisticsGroup" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ContactPersonId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="LineOfBusinessId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SegmentId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SubsegmentId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CompanyChainId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SalesDistrictId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Blocked" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MandatoryCreditLimit" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CreditRating" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CreditMax" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MarkupGroup" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="InventSiteId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="InventLocation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CustItemGroupId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CommissionGroup" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SalesGroup" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SalesPoolId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MultiLineDisc" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="EndDisc" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PriceGroup" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="LineDisc" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PaymTermId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PaymMode" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PaymSpec" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PaymSched" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PaymDayId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CashDisc" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="BankAccount" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="FineCode_BR" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="InterestCode_BR" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="InvoiceAccount" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="InvoiceAddress" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="numberSequenceGroup" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TaxWithholdCalculate_TH" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TaxWithholdGroup_TH" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DlvTerm" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DlvMode" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DlvReason" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DestinationCodeId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="VATNum" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="InclTax" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CustFinalUser_BR" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ICMSContributor_BR" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ServiceCodeOnDlvAddress_BR" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CCMNum_BR" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CNAE_BR" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Suframa_BR" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SuframaNumber_BR" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SuframaPISCOFINS_BR" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="GenerateIncomingFiscalDocument_BR" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MainContactWorkerPartyName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MainContactWorkerPartyNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MainContactWorkerPersonnelNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PhoneName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DefaultDimensionStr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TaxWithholdCalculate_IN" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="EmailName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="URL" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="UrlName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

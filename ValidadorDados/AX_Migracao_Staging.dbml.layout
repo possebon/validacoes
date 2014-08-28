@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 18.5" name="AX_Migracao_Staging">
+  <DataContextMoniker Name="/AX_Migracao_StagingDataContext" />
+  <nestedChildShapes>
+    <classShape Id="e36102dc-a16d-41a9-a74b-17c84101d254" absoluteBounds="4.75, 0.5, 2, 17.731915690104167">
+      <DataClassMoniker Name="/AX_Migracao_StagingDataContext/stg_Cliente" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ebe76596-5564-415f-af89-ebaa0f2958ea" absoluteBounds="4.765, 0.96, 1.9700000000000002, 17.171915690104164" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

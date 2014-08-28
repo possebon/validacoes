@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AX62_TMSA_PRD" Class="DynamicsAX2012R2DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=CLSQLDB\DAXDB;Initial Catalog=AX62_TMSA_PRD;Integrated Security=True" SettingsObjectName="ValidadorDados.Properties.Settings" SettingsPropertyName="AX62_TMSA_PRDConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.LOGISTICSADDRESSZIPCODE" Member="LOGISTICSADDRESSZIPCODEs">
+    <Type Name="LOGISTICSADDRESSZIPCODE">
+      <Column Name="ZIPCODE" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CITY" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="STREETNAME" Type="System.String" DbType="NVarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="FROMNUM" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TONUM" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EVENODD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="COUNTY" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="COUNTRYREGIONID" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="STATE" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CITYALIAS" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="TIMEZONE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DISTRICT" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CITYRECID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DISTRICTNAME" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="RECVERSION" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PARTITION" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="RECID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

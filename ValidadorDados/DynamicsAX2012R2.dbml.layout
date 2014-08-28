@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DynamicsAX2012R2">
+  <DataContextMoniker Name="/DynamicsAX2012R2DataContext" />
+  <nestedChildShapes>
+    <classShape Id="8b331f90-c30b-40e0-ac90-283f63f8e440" absoluteBounds="4.25, 0.5, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/DynamicsAX2012R2DataContext/LOGISTICSADDRESSZIPCODE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="663d49e4-e249-4e05-b1ae-ca70137ac158" absoluteBounds="4.265, 0.96, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
