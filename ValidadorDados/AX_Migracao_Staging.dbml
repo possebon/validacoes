@@ -92,4 +92,51 @@
       <Column Name="UrlName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.stg_Fornecedores" Member="stg_Fornecedores">
+    <Type Name="stg_Fornecedore">
+      <Column Name="RegistroIDMig" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AccountNum" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="OldAccountNum" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MiddleName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CountryRegionId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NameAlias" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="VendGroup" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PartyType" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Currency" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="LanguageId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="LocationRole" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ZipCode" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Street" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="StreetNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="BuildingCompliment" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PostBox" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DistrictName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="BankAccount" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ItemBuyerGroupId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CompanyChainId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TaxGroup" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DlvMode" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PurchPoolId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PaymTermId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PaymMode" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CNPJCPFNum_BR" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IENum_BR" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CCMNum_BR" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PhoneName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="EmailName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="URL" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="UrlName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TaxWithholdGroup" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TaxWithholdCalculate" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="InclTax" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="InventSiteId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

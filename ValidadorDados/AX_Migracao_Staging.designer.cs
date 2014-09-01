@@ -33,6 +33,9 @@ namespace ValidadorDados
     partial void Insertstg_Cliente(stg_Cliente instance);
     partial void Updatestg_Cliente(stg_Cliente instance);
     partial void Deletestg_Cliente(stg_Cliente instance);
+    partial void Insertstg_Fornecedore(stg_Fornecedore instance);
+    partial void Updatestg_Fornecedore(stg_Fornecedore instance);
+    partial void Deletestg_Fornecedore(stg_Fornecedore instance);
     #endregion
 		
 		public AX_Migracao_StagingDataContext() : 
@@ -70,6 +73,14 @@ namespace ValidadorDados
 			get
 			{
 				return this.GetTable<stg_Cliente>();
+			}
+		}
+		
+		public System.Data.Linq.Table<stg_Fornecedore> stg_Fornecedores
+		{
+			get
+			{
+				return this.GetTable<stg_Fornecedore>();
 			}
 		}
 	}
@@ -2199,6 +2210,1076 @@ namespace ValidadorDados
 					this._UrlName = value;
 					this.SendPropertyChanged("UrlName");
 					this.OnUrlNameChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.stg_Fornecedores")]
+	public partial class stg_Fornecedore : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _RegistroIDMig;
+		
+		private string _AccountNum;
+		
+		private string _OldAccountNum;
+		
+		private string _Name;
+		
+		private string _FirstName;
+		
+		private string _MiddleName;
+		
+		private string _LastName;
+		
+		private string _CountryRegionId;
+		
+		private string _NameAlias;
+		
+		private string _VendGroup;
+		
+		private string _PartyType;
+		
+		private string _Currency;
+		
+		private string _LanguageId;
+		
+		private string _LocationRole;
+		
+		private string _ZipCode;
+		
+		private string _Street;
+		
+		private string _StreetNumber;
+		
+		private string _BuildingCompliment;
+		
+		private string _PostBox;
+		
+		private string _City;
+		
+		private string _DistrictName;
+		
+		private string _State;
+		
+		private string _BankAccount;
+		
+		private string _ItemBuyerGroupId;
+		
+		private string _CompanyChainId;
+		
+		private string _TaxGroup;
+		
+		private string _DlvMode;
+		
+		private string _PurchPoolId;
+		
+		private string _PaymTermId;
+		
+		private string _PaymMode;
+		
+		private string _CNPJCPFNum_BR;
+		
+		private string _IENum_BR;
+		
+		private string _CCMNum_BR;
+		
+		private string _Phone;
+		
+		private string _PhoneName;
+		
+		private string _Email;
+		
+		private string _EmailName;
+		
+		private string _URL;
+		
+		private string _UrlName;
+		
+		private string _TaxWithholdGroup;
+		
+		private string _TaxWithholdCalculate;
+		
+		private string _InclTax;
+		
+		private string _InventSiteId;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnRegistroIDMigChanging(int value);
+    partial void OnRegistroIDMigChanged();
+    partial void OnAccountNumChanging(string value);
+    partial void OnAccountNumChanged();
+    partial void OnOldAccountNumChanging(string value);
+    partial void OnOldAccountNumChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnFirstNameChanging(string value);
+    partial void OnFirstNameChanged();
+    partial void OnMiddleNameChanging(string value);
+    partial void OnMiddleNameChanged();
+    partial void OnLastNameChanging(string value);
+    partial void OnLastNameChanged();
+    partial void OnCountryRegionIdChanging(string value);
+    partial void OnCountryRegionIdChanged();
+    partial void OnNameAliasChanging(string value);
+    partial void OnNameAliasChanged();
+    partial void OnVendGroupChanging(string value);
+    partial void OnVendGroupChanged();
+    partial void OnPartyTypeChanging(string value);
+    partial void OnPartyTypeChanged();
+    partial void OnCurrencyChanging(string value);
+    partial void OnCurrencyChanged();
+    partial void OnLanguageIdChanging(string value);
+    partial void OnLanguageIdChanged();
+    partial void OnLocationRoleChanging(string value);
+    partial void OnLocationRoleChanged();
+    partial void OnZipCodeChanging(string value);
+    partial void OnZipCodeChanged();
+    partial void OnStreetChanging(string value);
+    partial void OnStreetChanged();
+    partial void OnStreetNumberChanging(string value);
+    partial void OnStreetNumberChanged();
+    partial void OnBuildingComplimentChanging(string value);
+    partial void OnBuildingComplimentChanged();
+    partial void OnPostBoxChanging(string value);
+    partial void OnPostBoxChanged();
+    partial void OnCityChanging(string value);
+    partial void OnCityChanged();
+    partial void OnDistrictNameChanging(string value);
+    partial void OnDistrictNameChanged();
+    partial void OnStateChanging(string value);
+    partial void OnStateChanged();
+    partial void OnBankAccountChanging(string value);
+    partial void OnBankAccountChanged();
+    partial void OnItemBuyerGroupIdChanging(string value);
+    partial void OnItemBuyerGroupIdChanged();
+    partial void OnCompanyChainIdChanging(string value);
+    partial void OnCompanyChainIdChanged();
+    partial void OnTaxGroupChanging(string value);
+    partial void OnTaxGroupChanged();
+    partial void OnDlvModeChanging(string value);
+    partial void OnDlvModeChanged();
+    partial void OnPurchPoolIdChanging(string value);
+    partial void OnPurchPoolIdChanged();
+    partial void OnPaymTermIdChanging(string value);
+    partial void OnPaymTermIdChanged();
+    partial void OnPaymModeChanging(string value);
+    partial void OnPaymModeChanged();
+    partial void OnCNPJCPFNum_BRChanging(string value);
+    partial void OnCNPJCPFNum_BRChanged();
+    partial void OnIENum_BRChanging(string value);
+    partial void OnIENum_BRChanged();
+    partial void OnCCMNum_BRChanging(string value);
+    partial void OnCCMNum_BRChanged();
+    partial void OnPhoneChanging(string value);
+    partial void OnPhoneChanged();
+    partial void OnPhoneNameChanging(string value);
+    partial void OnPhoneNameChanged();
+    partial void OnEmailChanging(string value);
+    partial void OnEmailChanged();
+    partial void OnEmailNameChanging(string value);
+    partial void OnEmailNameChanged();
+    partial void OnURLChanging(string value);
+    partial void OnURLChanged();
+    partial void OnUrlNameChanging(string value);
+    partial void OnUrlNameChanged();
+    partial void OnTaxWithholdGroupChanging(string value);
+    partial void OnTaxWithholdGroupChanged();
+    partial void OnTaxWithholdCalculateChanging(string value);
+    partial void OnTaxWithholdCalculateChanged();
+    partial void OnInclTaxChanging(string value);
+    partial void OnInclTaxChanged();
+    partial void OnInventSiteIdChanging(string value);
+    partial void OnInventSiteIdChanged();
+    #endregion
+		
+		public stg_Fornecedore()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RegistroIDMig", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int RegistroIDMig
+		{
+			get
+			{
+				return this._RegistroIDMig;
+			}
+			set
+			{
+				if ((this._RegistroIDMig != value))
+				{
+					this.OnRegistroIDMigChanging(value);
+					this.SendPropertyChanging();
+					this._RegistroIDMig = value;
+					this.SendPropertyChanged("RegistroIDMig");
+					this.OnRegistroIDMigChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AccountNum", DbType="NVarChar(255)")]
+		public string AccountNum
+		{
+			get
+			{
+				return this._AccountNum;
+			}
+			set
+			{
+				if ((this._AccountNum != value))
+				{
+					this.OnAccountNumChanging(value);
+					this.SendPropertyChanging();
+					this._AccountNum = value;
+					this.SendPropertyChanged("AccountNum");
+					this.OnAccountNumChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OldAccountNum", DbType="NVarChar(255)")]
+		public string OldAccountNum
+		{
+			get
+			{
+				return this._OldAccountNum;
+			}
+			set
+			{
+				if ((this._OldAccountNum != value))
+				{
+					this.OnOldAccountNumChanging(value);
+					this.SendPropertyChanging();
+					this._OldAccountNum = value;
+					this.SendPropertyChanged("OldAccountNum");
+					this.OnOldAccountNumChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(255)")]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstName", DbType="NVarChar(255)")]
+		public string FirstName
+		{
+			get
+			{
+				return this._FirstName;
+			}
+			set
+			{
+				if ((this._FirstName != value))
+				{
+					this.OnFirstNameChanging(value);
+					this.SendPropertyChanging();
+					this._FirstName = value;
+					this.SendPropertyChanged("FirstName");
+					this.OnFirstNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MiddleName", DbType="NVarChar(255)")]
+		public string MiddleName
+		{
+			get
+			{
+				return this._MiddleName;
+			}
+			set
+			{
+				if ((this._MiddleName != value))
+				{
+					this.OnMiddleNameChanging(value);
+					this.SendPropertyChanging();
+					this._MiddleName = value;
+					this.SendPropertyChanged("MiddleName");
+					this.OnMiddleNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastName", DbType="NVarChar(255)")]
+		public string LastName
+		{
+			get
+			{
+				return this._LastName;
+			}
+			set
+			{
+				if ((this._LastName != value))
+				{
+					this.OnLastNameChanging(value);
+					this.SendPropertyChanging();
+					this._LastName = value;
+					this.SendPropertyChanged("LastName");
+					this.OnLastNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountryRegionId", DbType="NVarChar(255)")]
+		public string CountryRegionId
+		{
+			get
+			{
+				return this._CountryRegionId;
+			}
+			set
+			{
+				if ((this._CountryRegionId != value))
+				{
+					this.OnCountryRegionIdChanging(value);
+					this.SendPropertyChanging();
+					this._CountryRegionId = value;
+					this.SendPropertyChanged("CountryRegionId");
+					this.OnCountryRegionIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NameAlias", DbType="NVarChar(255)")]
+		public string NameAlias
+		{
+			get
+			{
+				return this._NameAlias;
+			}
+			set
+			{
+				if ((this._NameAlias != value))
+				{
+					this.OnNameAliasChanging(value);
+					this.SendPropertyChanging();
+					this._NameAlias = value;
+					this.SendPropertyChanged("NameAlias");
+					this.OnNameAliasChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VendGroup", DbType="NVarChar(255)")]
+		public string VendGroup
+		{
+			get
+			{
+				return this._VendGroup;
+			}
+			set
+			{
+				if ((this._VendGroup != value))
+				{
+					this.OnVendGroupChanging(value);
+					this.SendPropertyChanging();
+					this._VendGroup = value;
+					this.SendPropertyChanged("VendGroup");
+					this.OnVendGroupChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PartyType", DbType="NVarChar(255)")]
+		public string PartyType
+		{
+			get
+			{
+				return this._PartyType;
+			}
+			set
+			{
+				if ((this._PartyType != value))
+				{
+					this.OnPartyTypeChanging(value);
+					this.SendPropertyChanging();
+					this._PartyType = value;
+					this.SendPropertyChanged("PartyType");
+					this.OnPartyTypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Currency", DbType="NVarChar(255)")]
+		public string Currency
+		{
+			get
+			{
+				return this._Currency;
+			}
+			set
+			{
+				if ((this._Currency != value))
+				{
+					this.OnCurrencyChanging(value);
+					this.SendPropertyChanging();
+					this._Currency = value;
+					this.SendPropertyChanged("Currency");
+					this.OnCurrencyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LanguageId", DbType="NVarChar(255)")]
+		public string LanguageId
+		{
+			get
+			{
+				return this._LanguageId;
+			}
+			set
+			{
+				if ((this._LanguageId != value))
+				{
+					this.OnLanguageIdChanging(value);
+					this.SendPropertyChanging();
+					this._LanguageId = value;
+					this.SendPropertyChanged("LanguageId");
+					this.OnLanguageIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LocationRole", DbType="NVarChar(255)")]
+		public string LocationRole
+		{
+			get
+			{
+				return this._LocationRole;
+			}
+			set
+			{
+				if ((this._LocationRole != value))
+				{
+					this.OnLocationRoleChanging(value);
+					this.SendPropertyChanging();
+					this._LocationRole = value;
+					this.SendPropertyChanged("LocationRole");
+					this.OnLocationRoleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ZipCode", DbType="NVarChar(255)")]
+		public string ZipCode
+		{
+			get
+			{
+				return this._ZipCode;
+			}
+			set
+			{
+				if ((this._ZipCode != value))
+				{
+					this.OnZipCodeChanging(value);
+					this.SendPropertyChanging();
+					this._ZipCode = value;
+					this.SendPropertyChanged("ZipCode");
+					this.OnZipCodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Street", DbType="NVarChar(255)")]
+		public string Street
+		{
+			get
+			{
+				return this._Street;
+			}
+			set
+			{
+				if ((this._Street != value))
+				{
+					this.OnStreetChanging(value);
+					this.SendPropertyChanging();
+					this._Street = value;
+					this.SendPropertyChanged("Street");
+					this.OnStreetChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StreetNumber", DbType="NVarChar(255)")]
+		public string StreetNumber
+		{
+			get
+			{
+				return this._StreetNumber;
+			}
+			set
+			{
+				if ((this._StreetNumber != value))
+				{
+					this.OnStreetNumberChanging(value);
+					this.SendPropertyChanging();
+					this._StreetNumber = value;
+					this.SendPropertyChanged("StreetNumber");
+					this.OnStreetNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BuildingCompliment", DbType="NVarChar(255)")]
+		public string BuildingCompliment
+		{
+			get
+			{
+				return this._BuildingCompliment;
+			}
+			set
+			{
+				if ((this._BuildingCompliment != value))
+				{
+					this.OnBuildingComplimentChanging(value);
+					this.SendPropertyChanging();
+					this._BuildingCompliment = value;
+					this.SendPropertyChanged("BuildingCompliment");
+					this.OnBuildingComplimentChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostBox", DbType="NVarChar(255)")]
+		public string PostBox
+		{
+			get
+			{
+				return this._PostBox;
+			}
+			set
+			{
+				if ((this._PostBox != value))
+				{
+					this.OnPostBoxChanging(value);
+					this.SendPropertyChanging();
+					this._PostBox = value;
+					this.SendPropertyChanged("PostBox");
+					this.OnPostBoxChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City", DbType="NVarChar(255)")]
+		public string City
+		{
+			get
+			{
+				return this._City;
+			}
+			set
+			{
+				if ((this._City != value))
+				{
+					this.OnCityChanging(value);
+					this.SendPropertyChanging();
+					this._City = value;
+					this.SendPropertyChanged("City");
+					this.OnCityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DistrictName", DbType="NVarChar(255)")]
+		public string DistrictName
+		{
+			get
+			{
+				return this._DistrictName;
+			}
+			set
+			{
+				if ((this._DistrictName != value))
+				{
+					this.OnDistrictNameChanging(value);
+					this.SendPropertyChanging();
+					this._DistrictName = value;
+					this.SendPropertyChanged("DistrictName");
+					this.OnDistrictNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_State", DbType="NVarChar(255)")]
+		public string State
+		{
+			get
+			{
+				return this._State;
+			}
+			set
+			{
+				if ((this._State != value))
+				{
+					this.OnStateChanging(value);
+					this.SendPropertyChanging();
+					this._State = value;
+					this.SendPropertyChanged("State");
+					this.OnStateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BankAccount", DbType="NVarChar(255)")]
+		public string BankAccount
+		{
+			get
+			{
+				return this._BankAccount;
+			}
+			set
+			{
+				if ((this._BankAccount != value))
+				{
+					this.OnBankAccountChanging(value);
+					this.SendPropertyChanging();
+					this._BankAccount = value;
+					this.SendPropertyChanged("BankAccount");
+					this.OnBankAccountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ItemBuyerGroupId", DbType="NVarChar(255)")]
+		public string ItemBuyerGroupId
+		{
+			get
+			{
+				return this._ItemBuyerGroupId;
+			}
+			set
+			{
+				if ((this._ItemBuyerGroupId != value))
+				{
+					this.OnItemBuyerGroupIdChanging(value);
+					this.SendPropertyChanging();
+					this._ItemBuyerGroupId = value;
+					this.SendPropertyChanged("ItemBuyerGroupId");
+					this.OnItemBuyerGroupIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompanyChainId", DbType="NVarChar(255)")]
+		public string CompanyChainId
+		{
+			get
+			{
+				return this._CompanyChainId;
+			}
+			set
+			{
+				if ((this._CompanyChainId != value))
+				{
+					this.OnCompanyChainIdChanging(value);
+					this.SendPropertyChanging();
+					this._CompanyChainId = value;
+					this.SendPropertyChanged("CompanyChainId");
+					this.OnCompanyChainIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TaxGroup", DbType="NVarChar(255)")]
+		public string TaxGroup
+		{
+			get
+			{
+				return this._TaxGroup;
+			}
+			set
+			{
+				if ((this._TaxGroup != value))
+				{
+					this.OnTaxGroupChanging(value);
+					this.SendPropertyChanging();
+					this._TaxGroup = value;
+					this.SendPropertyChanged("TaxGroup");
+					this.OnTaxGroupChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DlvMode", DbType="NVarChar(255)")]
+		public string DlvMode
+		{
+			get
+			{
+				return this._DlvMode;
+			}
+			set
+			{
+				if ((this._DlvMode != value))
+				{
+					this.OnDlvModeChanging(value);
+					this.SendPropertyChanging();
+					this._DlvMode = value;
+					this.SendPropertyChanged("DlvMode");
+					this.OnDlvModeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PurchPoolId", DbType="NVarChar(255)")]
+		public string PurchPoolId
+		{
+			get
+			{
+				return this._PurchPoolId;
+			}
+			set
+			{
+				if ((this._PurchPoolId != value))
+				{
+					this.OnPurchPoolIdChanging(value);
+					this.SendPropertyChanging();
+					this._PurchPoolId = value;
+					this.SendPropertyChanged("PurchPoolId");
+					this.OnPurchPoolIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PaymTermId", DbType="NVarChar(255)")]
+		public string PaymTermId
+		{
+			get
+			{
+				return this._PaymTermId;
+			}
+			set
+			{
+				if ((this._PaymTermId != value))
+				{
+					this.OnPaymTermIdChanging(value);
+					this.SendPropertyChanging();
+					this._PaymTermId = value;
+					this.SendPropertyChanged("PaymTermId");
+					this.OnPaymTermIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PaymMode", DbType="NVarChar(255)")]
+		public string PaymMode
+		{
+			get
+			{
+				return this._PaymMode;
+			}
+			set
+			{
+				if ((this._PaymMode != value))
+				{
+					this.OnPaymModeChanging(value);
+					this.SendPropertyChanging();
+					this._PaymMode = value;
+					this.SendPropertyChanged("PaymMode");
+					this.OnPaymModeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CNPJCPFNum_BR", DbType="NVarChar(255)")]
+		public string CNPJCPFNum_BR
+		{
+			get
+			{
+				return this._CNPJCPFNum_BR;
+			}
+			set
+			{
+				if ((this._CNPJCPFNum_BR != value))
+				{
+					this.OnCNPJCPFNum_BRChanging(value);
+					this.SendPropertyChanging();
+					this._CNPJCPFNum_BR = value;
+					this.SendPropertyChanged("CNPJCPFNum_BR");
+					this.OnCNPJCPFNum_BRChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IENum_BR", DbType="NVarChar(255)")]
+		public string IENum_BR
+		{
+			get
+			{
+				return this._IENum_BR;
+			}
+			set
+			{
+				if ((this._IENum_BR != value))
+				{
+					this.OnIENum_BRChanging(value);
+					this.SendPropertyChanging();
+					this._IENum_BR = value;
+					this.SendPropertyChanged("IENum_BR");
+					this.OnIENum_BRChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CCMNum_BR", DbType="NVarChar(255)")]
+		public string CCMNum_BR
+		{
+			get
+			{
+				return this._CCMNum_BR;
+			}
+			set
+			{
+				if ((this._CCMNum_BR != value))
+				{
+					this.OnCCMNum_BRChanging(value);
+					this.SendPropertyChanging();
+					this._CCMNum_BR = value;
+					this.SendPropertyChanged("CCMNum_BR");
+					this.OnCCMNum_BRChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="NVarChar(255)")]
+		public string Phone
+		{
+			get
+			{
+				return this._Phone;
+			}
+			set
+			{
+				if ((this._Phone != value))
+				{
+					this.OnPhoneChanging(value);
+					this.SendPropertyChanging();
+					this._Phone = value;
+					this.SendPropertyChanged("Phone");
+					this.OnPhoneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhoneName", DbType="NVarChar(255)")]
+		public string PhoneName
+		{
+			get
+			{
+				return this._PhoneName;
+			}
+			set
+			{
+				if ((this._PhoneName != value))
+				{
+					this.OnPhoneNameChanging(value);
+					this.SendPropertyChanging();
+					this._PhoneName = value;
+					this.SendPropertyChanged("PhoneName");
+					this.OnPhoneNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(255)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this.OnEmailChanging(value);
+					this.SendPropertyChanging();
+					this._Email = value;
+					this.SendPropertyChanged("Email");
+					this.OnEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmailName", DbType="NVarChar(255)")]
+		public string EmailName
+		{
+			get
+			{
+				return this._EmailName;
+			}
+			set
+			{
+				if ((this._EmailName != value))
+				{
+					this.OnEmailNameChanging(value);
+					this.SendPropertyChanging();
+					this._EmailName = value;
+					this.SendPropertyChanged("EmailName");
+					this.OnEmailNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_URL", DbType="NVarChar(255)")]
+		public string URL
+		{
+			get
+			{
+				return this._URL;
+			}
+			set
+			{
+				if ((this._URL != value))
+				{
+					this.OnURLChanging(value);
+					this.SendPropertyChanging();
+					this._URL = value;
+					this.SendPropertyChanged("URL");
+					this.OnURLChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UrlName", DbType="NVarChar(255)")]
+		public string UrlName
+		{
+			get
+			{
+				return this._UrlName;
+			}
+			set
+			{
+				if ((this._UrlName != value))
+				{
+					this.OnUrlNameChanging(value);
+					this.SendPropertyChanging();
+					this._UrlName = value;
+					this.SendPropertyChanged("UrlName");
+					this.OnUrlNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TaxWithholdGroup", DbType="NVarChar(255)")]
+		public string TaxWithholdGroup
+		{
+			get
+			{
+				return this._TaxWithholdGroup;
+			}
+			set
+			{
+				if ((this._TaxWithholdGroup != value))
+				{
+					this.OnTaxWithholdGroupChanging(value);
+					this.SendPropertyChanging();
+					this._TaxWithholdGroup = value;
+					this.SendPropertyChanged("TaxWithholdGroup");
+					this.OnTaxWithholdGroupChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TaxWithholdCalculate", DbType="NVarChar(255)")]
+		public string TaxWithholdCalculate
+		{
+			get
+			{
+				return this._TaxWithholdCalculate;
+			}
+			set
+			{
+				if ((this._TaxWithholdCalculate != value))
+				{
+					this.OnTaxWithholdCalculateChanging(value);
+					this.SendPropertyChanging();
+					this._TaxWithholdCalculate = value;
+					this.SendPropertyChanged("TaxWithholdCalculate");
+					this.OnTaxWithholdCalculateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InclTax", DbType="NVarChar(255)")]
+		public string InclTax
+		{
+			get
+			{
+				return this._InclTax;
+			}
+			set
+			{
+				if ((this._InclTax != value))
+				{
+					this.OnInclTaxChanging(value);
+					this.SendPropertyChanging();
+					this._InclTax = value;
+					this.SendPropertyChanged("InclTax");
+					this.OnInclTaxChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InventSiteId", DbType="NVarChar(255)")]
+		public string InventSiteId
+		{
+			get
+			{
+				return this._InventSiteId;
+			}
+			set
+			{
+				if ((this._InventSiteId != value))
+				{
+					this.OnInventSiteIdChanging(value);
+					this.SendPropertyChanging();
+					this._InventSiteId = value;
+					this.SendPropertyChanged("InventSiteId");
+					this.OnInventSiteIdChanged();
 				}
 			}
 		}

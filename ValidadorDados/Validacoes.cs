@@ -215,7 +215,7 @@ namespace ValidadorDados
             switch (pUF.ToUpper())
             {
 
-                case "AC":
+                case "AC": // OK - Validado
 
                     strBase = (strOrigem.Trim() + "00000000000").Substring(0, 11);
 
@@ -304,7 +304,7 @@ namespace ValidadorDados
 
                     break;
 
-                case "AL":
+                case "AL": // OK - Validado
 
                     strBase = (strOrigem.Trim() + "000000000").Substring(0, 8);
 
@@ -360,7 +360,7 @@ namespace ValidadorDados
 
                     break;
 
-                case "AM":
+                case "AM": // OK - Validado
 
                     strBase = (strOrigem.Trim() + "000000000").Substring(0, 8);
 
@@ -420,7 +420,7 @@ namespace ValidadorDados
 
                     break;
 
-                case "AP":
+                case "AP": // OK - Validado
 
                     strBase = (strOrigem.Trim() + "000000000").Substring(0, 8);
 
@@ -513,7 +513,7 @@ namespace ValidadorDados
 
                     break;
 
-                case "BA":
+                case "BA": // OK - Validado
 
                     if (strOrigem.Length == 8)
                     {
@@ -617,7 +617,7 @@ namespace ValidadorDados
 
                     break;
 
-                case "CE":
+                case "CE": // OK - Validado
 
                     strBase = (strOrigem.Trim() + "000000000").Substring(0, 9);
 
@@ -658,18 +658,17 @@ namespace ValidadorDados
 
                     break;
 
-                case "DF":
+                case "DF": // OK - Validado
 
-                    strBase = (strOrigem.Trim() + "0000000000000").Substring(0, 13);
+                    strBase = Convert.ToInt64(strOrigem.Trim()).ToString("0000000000000").Substring(0,11);
 
                     if ((strBase.Substring(0, 3) == "073"))
                     {
 
                         intSoma = 0;
-
                         intPeso = 2;
 
-                        for (intPos = 11; (intPos <= 1); intPos = (intPos + -1))
+                        for (intPos = strBase.Length; intPos >= 1; intPos--)
                         {
 
                             intValor = int.Parse(strBase.Substring((intPos - 1), 1));
@@ -688,7 +687,7 @@ namespace ValidadorDados
                             }
 
                         }
-
+                        
                         intResto = (intSoma % 11);
 
                         strDigito1 = ((intResto < 2) ? "0" : Convert.ToString((11 - intResto))).Substring((((intResto < 2) ? "0" : Convert.ToString((11 - intResto))).Length - 1));
@@ -696,13 +695,12 @@ namespace ValidadorDados
                         strBase2 = (strBase.Substring(0, 11) + strDigito1);
 
                         intSoma = 0;
-
                         intPeso = 2;
 
-                        for (intPos = 12; (intPos <= 1); intPos = (intPos + -1))
+                        for (intPos = strBase2.Length; intPos >= 1; intPos--)
                         {
 
-                            intValor = int.Parse(strBase.Substring((intPos - 1), 1));
+                            intValor = int.Parse(strBase2.Substring((intPos - 1), 1));
 
                             intValor = (intValor * intPeso);
 
@@ -719,11 +717,14 @@ namespace ValidadorDados
 
                         }
 
+
+
+
                         intResto = (intSoma % 11);
 
                         strDigito2 = ((intResto < 2) ? "0" : Convert.ToString((11 - intResto))).Substring((((intResto < 2) ? "0" : Convert.ToString((11 - intResto))).Length - 1));
 
-                        strBase2 = (strBase.Substring(0, 12) + strDigito2);
+                        strBase2 = (strBase2 + strDigito2);
 
                         if ((strBase2 == strOrigem))
                         {
@@ -736,9 +737,9 @@ namespace ValidadorDados
 
                     break;
 
-                case "ES":
+                case "ES": // OK - Validado
 
-                    strBase = (strOrigem.Trim() + "000000000").Substring(0, 9);
+                    strBase = Convert.ToInt64(strOrigem).ToString("000000000").Substring(0,8);
 
                     intSoma = 0;
 
@@ -768,9 +769,9 @@ namespace ValidadorDados
 
                     break;
 
-                case "GO":
+                case "GO": // OK - Validado
 
-                    strBase = (strOrigem.Trim() + "000000000").Substring(0, 9);
+                    strBase = (strOrigem.Trim() + "000000000").Substring(0, 8);
 
                     if ((("10,11,15".IndexOf(strBase.Substring(0, 2), 0, System.StringComparison.OrdinalIgnoreCase) + 1)
 
@@ -832,9 +833,9 @@ namespace ValidadorDados
 
                     break;
 
-                case "MA":
+                case "MA": // OK - Validado
 
-                    strBase = (strOrigem.Trim() + "000000000").Substring(0, 9);
+                    strBase = (strOrigem.Trim() + "000000000").Substring(0, 8);
 
                     if ((strBase.Substring(0, 2) == "12"))
                     {
@@ -869,15 +870,14 @@ namespace ValidadorDados
 
                     break;
 
-                case "MT":
+                case "MT": // OK - Validado
 
                     strBase = (strOrigem.Trim() + "0000000000").Substring(0, 10);
 
                     intSoma = 0;
-
                     intPeso = 2;
 
-                    for (intPos = 10; (intPos <= 1); intPos = (intPos + -1))
+                    for (intPos = strBase.Length; intPos >= 1; intPos--)
                     {
 
                         intValor = int.Parse(strBase.Substring((intPos - 1), 1));
@@ -912,9 +912,9 @@ namespace ValidadorDados
 
                     break;
 
-                case "MS":
+                case "MS": // OK - Validado
 
-                    strBase = (strOrigem.Trim() + "000000000").Substring(0, 9);
+                    strBase = (strOrigem.Trim() + "000000000").Substring(0, 8);
 
                     if ((strBase.Substring(0, 2) == "28"))
                     {
@@ -951,11 +951,13 @@ namespace ValidadorDados
 
                 case "MG":
 
-                    strBase = (strOrigem.Trim() + "0000000000000").Substring(0, 13);
+                    strBase = (strOrigem.Trim() + "0000000000000").Substring(0, 11);
 
                     strBase2 = (strBase.Substring(0, 3) + ("0" + strBase.Substring(3, 8)));
 
                     intNumero = 2;
+                    intSoma = 0;
+                    //int intDigito = 0;
 
                     for (intPos = 1; (intPos <= 12); intPos++)
                     {
@@ -966,12 +968,14 @@ namespace ValidadorDados
 
                         intValor = (intValor * intNumero);
 
+                        intSoma = intSoma + intNumero;
+
                         if ((intValor > 9))
                         {
 
-                            strDigito1 = string.Format("00", intValor);
+                            strDigito1 = intValor.ToString("00");
 
-                            intValor = (int.Parse(strDigito1.Substring(0, 1)) + int.Parse(strDigito1.Substring((strDigito1.Length - 1))));
+                            intValor = int.Parse(strDigito1.Substring(0, 1)) + int.Parse(strDigito1.Substring(1,1));
 
                         }
 
@@ -979,55 +983,67 @@ namespace ValidadorDados
 
                     }
 
-                    intValor = intSoma;
+                    //intValor = intSoma;
 
-                    while ((string.Format("000", intValor).Substring((string.Format("000", intValor).Length - 1)) != "0"))
-                    {
+                    //int TamTotal = 3;
+                    //int SomaResultado = 0;
 
-                        intValor = (intValor + 1);
+                    //while (intValor.ToString("000").Substring(TamTotal-1,1)!="0")
+                    //{
+                    //    //intValor2 = intValor2 + 1;
+                    //    SomaResultado = SomaResultado + Convert.ToInt32(intValor.ToString("000").Substring(TamTotal - 1, 1));
+                    //    TamTotal--;
+                    //}
+                    
+                    
+                    
+                    //while ((string.Format("000", intValor).Substring((string.Format("000", intValor).Length - 1)) != "0"))
+                    //{
 
-                        strDigito1 = string.Format("00", (intValor - intSoma)).Substring((string.Format("00", (intValor - intSoma)).Length - 1));
+                    //    intValor = (intValor + 1);
 
-                        strBase2 = (strBase.Substring(0, 11) + strDigito1);
+                    //    strDigito1 = string.Format("00", (intValor - intSoma)).Substring((string.Format("00", (intValor - intSoma)).Length - 1));
 
-                        intSoma = 0;
+                    //    strBase2 = (strBase.Substring(0, 11) + strDigito1);
 
-                        intPeso = 2;
+                    //    intSoma = 0;
 
-                        for (intPos = 12; (intPos <= 1); intPos = (intPos + -1))
-                        {
+                    //    intPeso = 2;
 
-                            intValor = int.Parse(strBase2.Substring((intPos - 1), 1));
+                    //    for (intPos = 12; (intPos <= 1); intPos = (intPos + -1))
+                    //    {
 
-                            intValor = (intValor * intPeso);
+                    //        intValor = int.Parse(strBase2.Substring((intPos - 1), 1));
 
-                            intSoma = (intSoma + intValor);
+                    //        intValor = (intValor * intPeso);
 
-                            intPeso = (intPeso + 1);
+                    //        intSoma = (intSoma + intValor);
 
-                            if ((intPeso > 11))
-                            {
+                    //        intPeso = (intPeso + 1);
 
-                                intPeso = 2;
+                    //        if ((intPeso > 11))
+                    //        {
 
-                            }
+                    //            intPeso = 2;
 
-                        }
+                    //        }
 
-                        intResto = (intSoma % 11);
+                    //    }
 
-                        strDigito2 = ((intResto < 2) ? "0" : Convert.ToString((11 - intResto))).Substring((((intResto < 2) ? "0" : Convert.ToString((11 - intResto))).Length - 1));
+                    //    intResto = (intSoma % 11);
 
-                        strBase2 = (strBase2 + strDigito2);
+                    //    strDigito2 = ((intResto < 2) ? "0" : Convert.ToString((11 - intResto))).Substring((((intResto < 2) ? "0" : Convert.ToString((11 - intResto))).Length - 1));
 
-                        if ((strBase2 == strOrigem))
-                        {
+                    //    strBase2 = (strBase2 + strDigito2);
 
-                            retorno = true;
+                    //    if ((strBase2 == strOrigem))
+                    //    {
 
-                        }
+                    //        retorno = true;
 
-                    }
+                    //    }
+
+                    //}
 
                     break;
 

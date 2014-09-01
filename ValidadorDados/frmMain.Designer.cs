@@ -41,12 +41,13 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.cmdCEPCliente = new System.Windows.Forms.Button();
             this.cmdIEClientes = new System.Windows.Forms.Button();
-            this.cmdCNPJCliente = new System.Windows.Forms.Button();
-            this.cmdCPFCliente = new System.Windows.Forms.Button();
+            this.cmdCPFCNPJCliente = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cmdCPFCNPJ_Fornecedor = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtValor
@@ -55,6 +56,7 @@
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(162, 20);
             this.txtValor.TabIndex = 0;
+            this.txtValor.Text = "062.307.904/0081";
             // 
             // cmdValida
             // 
@@ -128,7 +130,7 @@
             this.txtValor2.Name = "txtValor2";
             this.txtValor2.Size = new System.Drawing.Size(61, 20);
             this.txtValor2.TabIndex = 7;
-            this.txtValor2.Text = "BA";
+            this.txtValor2.Text = "MG";
             // 
             // groupBox1
             // 
@@ -154,8 +156,7 @@
             // 
             this.tabPage1.Controls.Add(this.cmdCEPCliente);
             this.tabPage1.Controls.Add(this.cmdIEClientes);
-            this.tabPage1.Controls.Add(this.cmdCNPJCliente);
-            this.tabPage1.Controls.Add(this.cmdCPFCliente);
+            this.tabPage1.Controls.Add(this.cmdCPFCNPJCliente);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -166,44 +167,36 @@
             // 
             // cmdCEPCliente
             // 
-            this.cmdCEPCliente.Location = new System.Drawing.Point(272, 6);
+            this.cmdCEPCliente.Location = new System.Drawing.Point(100, 6);
             this.cmdCEPCliente.Name = "cmdCEPCliente";
             this.cmdCEPCliente.Size = new System.Drawing.Size(75, 56);
             this.cmdCEPCliente.TabIndex = 19;
             this.cmdCEPCliente.Text = "Validar CEP Clientes";
             this.cmdCEPCliente.UseVisualStyleBackColor = true;
+            this.cmdCEPCliente.Click += new System.EventHandler(this.cmdCEPCliente_Click);
             // 
             // cmdIEClientes
             // 
-            this.cmdIEClientes.Location = new System.Drawing.Point(181, 6);
+            this.cmdIEClientes.Location = new System.Drawing.Point(195, 6);
             this.cmdIEClientes.Name = "cmdIEClientes";
             this.cmdIEClientes.Size = new System.Drawing.Size(75, 56);
             this.cmdIEClientes.TabIndex = 18;
             this.cmdIEClientes.Text = "Validar I.E. Clientes";
             this.cmdIEClientes.UseVisualStyleBackColor = true;
             // 
-            // cmdCNPJCliente
+            // cmdCPFCNPJCliente
             // 
-            this.cmdCNPJCliente.Location = new System.Drawing.Point(93, 6);
-            this.cmdCNPJCliente.Name = "cmdCNPJCliente";
-            this.cmdCNPJCliente.Size = new System.Drawing.Size(75, 56);
-            this.cmdCNPJCliente.TabIndex = 17;
-            this.cmdCNPJCliente.Text = "Validar CNPJ Clientes";
-            this.cmdCNPJCliente.UseVisualStyleBackColor = true;
-            this.cmdCNPJCliente.Click += new System.EventHandler(this.cmdCNPJCliente_Click);
-            // 
-            // cmdCPFCliente
-            // 
-            this.cmdCPFCliente.Location = new System.Drawing.Point(6, 6);
-            this.cmdCPFCliente.Name = "cmdCPFCliente";
-            this.cmdCPFCliente.Size = new System.Drawing.Size(75, 56);
-            this.cmdCPFCliente.TabIndex = 16;
-            this.cmdCPFCliente.Text = "Validar CPF Clientes";
-            this.cmdCPFCliente.UseVisualStyleBackColor = true;
-            this.cmdCPFCliente.Click += new System.EventHandler(this.cmdCPFCliente_Click);
+            this.cmdCPFCNPJCliente.Location = new System.Drawing.Point(6, 6);
+            this.cmdCPFCNPJCliente.Name = "cmdCPFCNPJCliente";
+            this.cmdCPFCNPJCliente.Size = new System.Drawing.Size(81, 56);
+            this.cmdCPFCNPJCliente.TabIndex = 16;
+            this.cmdCPFCNPJCliente.Text = "Validar CPF e CNPJ Clientes";
+            this.cmdCPFCNPJCliente.UseVisualStyleBackColor = true;
+            this.cmdCPFCNPJCliente.Click += new System.EventHandler(this.cmdCPFCNPJCliente_Click);
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.cmdCPFCNPJ_Fornecedor);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -211,6 +204,16 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Fornecedores";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // cmdCPFCNPJ_Fornecedor
+            // 
+            this.cmdCPFCNPJ_Fornecedor.Location = new System.Drawing.Point(18, 15);
+            this.cmdCPFCNPJ_Fornecedor.Name = "cmdCPFCNPJ_Fornecedor";
+            this.cmdCPFCNPJ_Fornecedor.Size = new System.Drawing.Size(84, 70);
+            this.cmdCPFCNPJ_Fornecedor.TabIndex = 0;
+            this.cmdCPFCNPJ_Fornecedor.Text = "Validar CPF e CNPJ";
+            this.cmdCPFCNPJ_Fornecedor.UseVisualStyleBackColor = true;
+            this.cmdCPFCNPJ_Fornecedor.Click += new System.EventHandler(this.cmdCPFCNPJ_Fornecedor_Click);
             // 
             // frmMain
             // 
@@ -229,9 +232,11 @@
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Validador de Dados";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.groupBox1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,9 +257,9 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button cmdCEPCliente;
         private System.Windows.Forms.Button cmdIEClientes;
-        private System.Windows.Forms.Button cmdCNPJCliente;
-        private System.Windows.Forms.Button cmdCPFCliente;
+        private System.Windows.Forms.Button cmdCPFCNPJCliente;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Button cmdCPFCNPJ_Fornecedor;
     }
 }
 
